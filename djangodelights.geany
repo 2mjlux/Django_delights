@@ -20,6 +20,7 @@ indent_mode=2
 [project]
 name=djangodelights
 base_path=/home/martin/workspace/github.com/2mjlux/practice-projects/Django_delights/
+description=
 
 [long line marker]
 long_line_behaviour=1
@@ -27,10 +28,10 @@ long_line_column=88
 
 [files]
 current_page=0
-FILE_NAME_0=425;Markdown;0;EUTF-8;0;1;1;%2Fhome%2Fmartin%2Fworkspace%2Fgithub.com%2F2mjlux%2Fpractice-projects%2FDjango_delights%2FPLANNING.md;0;4
+FILE_NAME_0=1091;Python;0;EUTF-8;0;1;1;%2Fhome%2Fmartin%2Fworkspace%2Fgithub.com%2F2mjlux%2Fpractice-projects%2FDjango_delights%2Fdjangodelights%2Fsettings.py;0;4
 
 [VTE]
-last_dir=/home/martin/workspace/github.com/2mjlux/private/ForestDynamicGrowthModellerV2.1/src
+last_dir=/home/martin/workspace/github.com/2mjlux/practice-projects/Django_delights
 
 [prjorg]
 source_patterns=*.c;*.C;*.cpp;*.cxx;*.c++;*.cc;*.m;
