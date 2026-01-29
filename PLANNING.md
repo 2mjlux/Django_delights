@@ -19,8 +19,8 @@ A web-based restaurant inventory management system where the owner can:
 
 ## Core Objectives
 
-- [ ] 4 database models (Ingredient, MenuItem, RecipeRequirement, Purchase)
-- [ ] CRUD operations for all models
+- [x] 4 database models (Ingredient, MenuItem, RecipeRequirement, Purchase)
+- [x] CRUD operations for all models
 - [ ] Inventory tracking that updates on purchases
 - [ ] Revenue and profit calculations
 - [ ] Authentication (login required for all views)
@@ -31,8 +31,8 @@ A web-based restaurant inventory management system where the owner can:
 ## Timeline - 1 Week
 
 **Days 1-2:** Setup, models, database
-- [ ] Virtual env, Django install, Git setup
-- [ ] Create and test all 4 models
+- [x] Virtual env, Django install, Git setup
+- [x] Create and test all 4 models
 - [ ] Load sample data via admin
 
 **Days 3-4:** Views and business logic
@@ -55,8 +55,8 @@ A web-based restaurant inventory management system where the owner can:
 ## Technical Notes
 
 **Database relationships:**
-- [ ] MenuItem ← RecipeRequirement → Ingredient
-- [ ] Purchase → MenuItem
+- [x] MenuItem ← RecipeRequirement → Ingredient
+- [x] Purchase → MenuItem
 
 **Key business logic:**
 - [ ] Validate inventory before allowing purchase
