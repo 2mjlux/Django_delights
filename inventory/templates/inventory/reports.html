@@ -1,0 +1,28 @@
+{% extends "inventory/base.html" %}
+
+{% block title %}Reports - Django Delights{% endblock %}
+
+{% block content %}
+    <h1>Financial Report</h1>
+
+    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-top: 20px;">
+        <h2>Summary</h2>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr>
+                <td style="padding: 10px; font-size: 18px;"><strong>Total Revenue:</strong></td>
+                <td style="padding: 10px; font-size: 18px; text-align: right;">€{{ revenue|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 18px;"><strong>Total Cost:</strong></td>
+                <td style="padding: 10px; font-size: 18px; text-align: right;">€{{ cost|floatformat:2 }}</td>
+            </tr>
+            <tr style="border-top: 2px solid #333;">
+                <td style="padding: 10px; font-size: 20px;"><strong>Gross Profit:</strong></td>
+                <td style="padding: 10px; font-size: 20px; text-align: right; color: green;"><strong>€{{ profit|floatformat:2 }}</strong></td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 20px; color: #666;">Based on {{ total_sales }} total sales</p>
+    </div>
+{% endblock %}

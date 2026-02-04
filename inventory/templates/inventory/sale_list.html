@@ -1,0 +1,30 @@
+{% extends "inventory/base.html" %}
+
+{% block title %}Sales - Django Delights{% endblock %}
+
+{% block content %}
+    <h1>Sales History</h1>
+
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Date & Time</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Menu Item</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Price (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sale in sales %}
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">{{ sale.timestamp|date:"Y-m-d H:i" }}</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{{ sale.menu_item.title }}</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{{ sale.menu_item.price }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" style="padding: 10px; text-align: center;">No sales recorded</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

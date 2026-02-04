@@ -5,7 +5,7 @@
 A web-based restaurant inventory management system where the owner can:
 - [ ] Track ingredient inventory and costs
 - [ ] Manage menu items and their recipes
-- [ ] Record customer purchases
+- [ ] Record customer purchases (sales)
 - [ ] View profit/revenue reports
 - [ ] All protected behind authentication
 
@@ -33,7 +33,7 @@ A web-based restaurant inventory management system where the owner can:
 **Days 1-2:** Setup, models, database
 - [x] Virtual env, Django install, Git setup
 - [x] Create and test all 4 models
-- [ ] Load sample data via admin
+- [x] Load sample data via admin
 
 **Days 3-4:** Views and business logic
 - [ ] Create all views for displaying data
@@ -56,11 +56,11 @@ A web-based restaurant inventory management system where the owner can:
 
 **Database relationships:**
 - [x] MenuItem ← RecipeRequirement → Ingredient
-- [x] Purchase → MenuItem
+- [x] Sale → MenuItem
 
 **Key business logic:**
-- [ ] Validate inventory before allowing purchase
-- [ ] Decrease quantities when purchase recorded
-- [ ] Revenue = sum of purchase prices
+- [ ] Validate inventory before allowing sale
+- [ ] Decrease quantities when sale recorded
+- [ ] Revenue = sum of sale prices
 - [ ] Cost = sum of ingredient costs used
 - [ ] Profit = revenue - cost
