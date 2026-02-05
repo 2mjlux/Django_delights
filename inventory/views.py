@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
-from .models import Ingredient, MenuItem, Sale
+from .models import Ingredient, MenuItem, Sale, RecipeRequirement
 from django.db.models import Sum
+from django.views.generic.edit import CreateView, UpdateView
+from django.urls import reverse_lazy
+from .forms import IngredientForm, MenuItemForm, RecipeRequirementForm, SaleForm
 
 
 class HomeView(TemplateView):
@@ -54,3 +57,38 @@ class ReportsView(TemplateView):
         context['total_sales'] = sales.count()
 
         return context
+
+
+class IngredientCreateView(CreateView):
+    model = Ingredient
+    form_class = IngredientForm
+    template_name = "inventory/ingredient_form.html"
+    success_url = reverse_lazy('inventory')
+
+
+class MenuItemCreateView(CreateView):
+    model = MenuItem
+    form_class = MenuItemForm
+    template_name = "inventory/menuitem_form.html"
+    success_url = reverse_lazy('menu')
+
+
+class RecipeRequirementCreateView(CreateView):
+    model = RecipeRequirement
+    form_class = RecipeRequirementForm
+    template_name = "inventory/reciperequirement_form.html"
+    success_url = reverse_lazy('menu')
+
+
+class SaleCreateView(CreateView):
+    model = Sale
+    form_class = SaleForm
+    template_name = "inventory/sale_form.html"
+    success_url = reverse_lazy('sales')
+
+
+class IngredientUpdateView(UpdateView):
+    model = Ingredient
+    form_class = IngredientForm
+    template_name = "inventory/ingredient_form.html"
+    success_url = reverse_lazy('inventory')

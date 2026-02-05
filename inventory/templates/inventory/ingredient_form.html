@@ -1,0 +1,27 @@
+{% extends "inventory/base.html" %}
+
+{% block title %}{% if object %}Update{% else %}Add{% endif %} Ingredient{% endblock %}
+
+{% block content %}
+    <h1>{% if object %}Update{% else %}Add{% endif %} Ingredient</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <div style="color: red; margin-bottom: 15px;">
+                <p><strong>Please correct the errors below:</strong></p>
+                {{ form.errors }}
+            </div>
+        {% endif %}
+
+        <table>
+            {{ form.as_table }}
+        </table>
+
+        <div style="margin-top: 20px;">
+            <button type="submit" style="padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">Save</button>
+            <a href="{% url 'inventory' %}" style="margin-left: 10px; padding: 10px 20px; background-color: #999; color: white; text-decoration: none; border-radius: 4px;">Cancel</a>
+        </div>
+    </form>
+{% endblock %}
