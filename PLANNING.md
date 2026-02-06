@@ -3,10 +3,10 @@
 ## End Result (target)
 
 A web-based restaurant inventory management system where the owner can:
-- [ ] Track ingredient inventory and costs
-- [ ] Manage menu items and their recipes
-- [ ] Record customer purchases (sales)
-- [ ] View profit/revenue reports
+- [x] Track ingredient inventory and costs
+- [x] Manage menu items and their recipes
+- [x] Record customer purchases (sales)
+- [x] View profit/revenue reports
 - [ ] All protected behind authentication
 
 **Tech Stack:**
@@ -21,10 +21,10 @@ A web-based restaurant inventory management system where the owner can:
 
 - [x] 4 database models (Ingredient, MenuItem, RecipeRequirement, Purchase)
 - [x] CRUD operations for all models
-- [ ] Inventory tracking that updates on purchases
+- [x] Inventory tracking that updates on purchases
 - [x] Revenue and profit calculations
 - [ ] Authentication (login required for all views)
-- [ ] Forms for data entry
+- [x] Forms for data entry
 
 ---
 
@@ -41,9 +41,9 @@ A web-based restaurant inventory management system where the owner can:
 - [x] Test purchase workflow
 
 **Days 5-6:** Templates and forms
-- [ ] Build all templates
-- [ ] Create forms for data entry
-- [ ] Connect forms to views
+- [x] Build all templates
+- [x] Create forms for data entry
+- [x] Connect forms to views
 
 **Day 7:** Authentication and final
 - [ ] Add login/logout
