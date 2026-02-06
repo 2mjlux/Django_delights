@@ -1,0 +1,27 @@
+{% extends "inventory/base.html" %}
+
+{% block title %}Add Recipe Requirement{% endblock %}
+
+{% block content %}
+    <h1>Add Recipe Requirement</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <div style="color: red; margin-bottom: 15px;">
+                <p><strong>Please correct the errors below:</strong></p>
+                {{ form.errors }}
+            </div>
+        {% endif %}
+
+        <table>
+            {{ form.as_table }}
+        </table>
+
+        <div style="margin-top: 20px;">
+            <button type="submit" style="padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">Save</button>
+            <a href="{% url 'menu' %}" style="margin-left: 10px; padding: 10px 20px; background-color: #999; color: white; text-decoration: none; border-radius: 4px;">Cancel</a>
+        </div>
+    </form>
+{% endblock %}

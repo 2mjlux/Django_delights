@@ -4,7 +4,9 @@
 
 {% block content %}
     <h1>Current Inventory</h1>
-
+        <div style="margin-bottom: 20px;">
+            <a href="{% url 'ingredient-add' %}" style="padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 4px;">Add New Ingredient</a>
+        </div>
     <table style="width: 100%; border-collapse: collapse;">
         <thead>
             <tr style="background-color: #f0f0f0;">
@@ -12,6 +14,7 @@
                 <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Quantity</th>
                 <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Unit</th>
                 <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Price per Unit (€)</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -21,10 +24,11 @@
                 <td style="padding: 10px; border: 1px solid #ddd;">{{ ingredient.quantity }}</td>
                 <td style="padding: 10px; border: 1px solid #ddd;">{{ ingredient.unit }}</td>
                 <td style="padding: 10px; border: 1px solid #ddd;">{{ ingredient.price_per_unit }}</td>
+                <td style="padding: 10px; border: 1px solid #ddd;"><a href="{% url 'ingredient-update' pk=ingredient.id %}">Edit</a></td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="4" style="padding: 10px; text-align: center;">No ingredients in inventory</td>
+                <td colspan="5" style="padding: 10px; text-align: center;">No ingredients in inventory</td>
             </tr>
             {% endfor %}
         </tbody>

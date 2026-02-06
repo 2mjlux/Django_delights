@@ -4,7 +4,9 @@
 
 {% block content %}
     <h1>Sales History</h1>
-
+        <div style="margin-bottom: 20px;">
+            <a href="{% url 'sale-add' %}" style="padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 4px;">Record New Sale</a>
+        </div>
     <table style="width: 100%; border-collapse: collapse;">
         <thead>
             <tr style="background-color: #f0f0f0;">
