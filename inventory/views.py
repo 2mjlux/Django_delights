@@ -86,6 +86,21 @@ class SaleCreateView(CreateView):
     template_name = "inventory/sale_form.html"
     success_url = reverse_lazy('sales')
 
+    def form_valid(self, form):
+        # Save the sale first
+        response = super().form_valid(form)
+
+        # Get the menu item that was sold
+        menu_item = form.cleaned_data['menu_item']
+
+        # Deduct ingredients from inventory
+        for req in menu_item.reciperequirement_set.all():
+            ingredient = req.ingredient
+            ingredient.quantity -= req.quantity
+            ingredient.save()
+
+        return response
+
 
 class IngredientUpdateView(UpdateView):
     model = Ingredient

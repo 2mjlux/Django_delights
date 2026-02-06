@@ -32,7 +32,7 @@ class SaleForm(forms.ModelForm):
         for req in menu_item.reciperequirement_set.all():
             if req.ingredient.quantity < req.quantity:
                 raise forms.ValidationError(
-                    f"Not enough {req.ingredient.name} in inventory."
+                    f"Not enough {req.ingredient.name} in inventory. "
                     f"Need {req.quantity} {req.ingredient.unit}, "
                     f"only have {req.ingredient.quantity} {req.ingredient.unit}."
                 )

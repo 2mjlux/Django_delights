@@ -3,17 +3,28 @@
 {% block title %}Record New Sale{% endblock %}
 
 {% block content %}
+
+<style>
+    .errorlist {
+        display: none;
+    }
+</style>
+
     <h1>Record New Sale</h1>
 
     <form method="post">
         {% csrf_token %}
 
         {% if form.errors %}
-            <div style="color: red; margin-bottom: 15px;">
-                <p><strong>Please correct the errors below:</strong></p>
-                {{ form.errors }}
-            </div>
-        {% endif %}
+            <div style="background-color: #fee; border: 2px solid #c00; border-radius: 4px; padding: 15px; margin-bottom: 20px;">
+                <p style="color: #c00; font-weight: bold; margin-bottom: 10px;">⚠️ Cannot Complete Sale</p>
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                <p style="color: #600; margin: 5px 0;">{{ error }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endif %}
 
         <table>
             {{ form.as_table }}
