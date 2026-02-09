@@ -7,7 +7,7 @@ A web-based restaurant inventory management system where the owner can:
 - [x] Manage menu items and their recipes
 - [x] Record customer purchases (sales)
 - [x] View profit/revenue reports
-- [ ] All protected behind authentication
+- [x] All protected behind authentication
 
 **Tech Stack:**
 - Django (backend framework)
@@ -23,7 +23,7 @@ A web-based restaurant inventory management system where the owner can:
 - [x] CRUD operations for all models
 - [x] Inventory tracking that updates on purchases
 - [x] Revenue and profit calculations
-- [ ] Authentication (login required for all views)
+- [x] Authentication (login required for all views)
 - [x] Forms for data entry
 
 ---
@@ -46,9 +46,9 @@ A web-based restaurant inventory management system where the owner can:
 - [x] Connect forms to views
 
 **Day 7:** Authentication and final
-- [ ] Add login/logout
-- [ ] Protect all views
-- [ ] Test and final commit
+- [x] Add login/logout
+- [x] Protect all views
+- [x] Test and final commit
 
 ---
 
@@ -59,8 +59,8 @@ A web-based restaurant inventory management system where the owner can:
 - [x] Sale → MenuItem
 
 **Key business logic:**
-- [ ] Validate inventory before allowing sale
-- [ ] Decrease quantities when sale recorded
-- [ ] Revenue = sum of sale prices
-- [ ] Cost = sum of ingredient costs used
-- [ ] Profit = revenue - cost
+- [x] Validate inventory before allowing sale
+- [x] Decrease quantities when sale recorded
+- [x] Revenue = sum of sale prices
+- [x] Cost = sum of ingredient costs used
+- [x] Profit = revenue - cost
